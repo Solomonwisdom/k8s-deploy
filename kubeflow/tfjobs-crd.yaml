@@ -1,0 +1,66 @@
+apiVersion: apiextensions.k8s.io/v1beta1
+kind: CustomResourceDefinition
+metadata:
+  creationTimestamp: 2019-03-13T08:24:46Z
+  generation: 1
+  name: tfjobs.kubeflow.org
+  resourceVersion: "16475770"
+  selfLink: /apis/apiextensions.k8s.io/v1beta1/customresourcedefinitions/tfjobs.kubeflow.org
+  uid: 75f5d812-4569-11e9-b069-1866dabbab47
+spec:
+  conversion:
+    strategy: None
+  group: kubeflow.org
+  names:
+    kind: TFJob
+    listKind: TFJobList
+    plural: tfjobs
+    singular: tfjob
+  scope: Namespaced
+  validation:
+    openAPIV3Schema:
+      properties:
+        spec:
+          properties:
+            tfReplicaSpecs:
+              properties:
+                Chief:
+                  properties:
+                    replicas:
+                      maximum: 1
+                      minimum: 1
+                      type: integer
+                PS:
+                  properties:
+                    replicas:
+                      minimum: 1
+                      type: integer
+                Worker:
+                  properties:
+                    replicas:
+                      minimum: 1
+                      type: integer
+  version: v1beta1
+  versions:
+  - name: v1beta1
+    served: true
+    storage: true
+status:
+  acceptedNames:
+    kind: TFJob
+    listKind: TFJobList
+    plural: tfjobs
+    singular: tfjob
+  conditions:
+  - lastTransitionTime: 2019-03-13T08:24:46Z
+    message: no conflicts found
+    reason: NoConflicts
+    status: "True"
+    type: NamesAccepted
+  - lastTransitionTime: null
+    message: the initial names have been accepted
+    reason: InitialNamesAccepted
+    status: "True"
+    type: Established
+  storedVersions:
+  - v1beta1

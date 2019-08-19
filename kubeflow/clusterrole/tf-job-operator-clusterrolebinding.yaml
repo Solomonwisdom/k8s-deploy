@@ -1,0 +1,22 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  annotations:
+    ksonnet.io/managed: '{"pristine":"H4sIAAAAAAAA/3yPsU7DQAyGdx7DcxrUDd0GDOxFYkEMvosDbi72yecrElHeHUUVW+hm6fP/f/YCWPiNrLIKBLCIqcfmX2r8g84q/fRQe9b7yzGS4xE6mFgGCPCcW3Wyk2Z6YhlYPqGDmRwHdISwQMZIuW4TlgIBfDycNR60kKGrbU1VRci3+qRzUSHxncW1A8GZ9olpphONVw2/mLZy64/d++GWoLZ4puQVwvvyl30lu3Cix5S0if8fv4JaMG10apHGrN+wfqx3vwAAAP//AQAA///xr4L5eQEAAA=="}'
+  creationTimestamp: 2018-12-26T06:52:03Z
+  labels:
+    app: tf-job-operator
+    app.kubernetes.io/deploy-manager: ksonnet
+    ksonnet.io/component: tf-job-operator
+  name: tf-job-operator
+  resourceVersion: "13550"
+  selfLink: /apis/rbac.authorization.k8s.io/v1/clusterrolebindings/tf-job-operator
+  uid: c02d836b-08da-11e9-9c12-1866dabbab47
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: tf-job-operator
+subjects:
+- kind: ServiceAccount
+  name: tf-job-operator
+  namespace: kubeflow

@@ -1,0 +1,66 @@
+apiVersion: apiextensions.k8s.io/v1beta1
+kind: CustomResourceDefinition
+metadata:
+  annotations:
+    ksonnet.io/managed: '{"pristine":"H4sIAAAAAAAA/4SSz2rjMBDG7/sYc9Z6CXspvpX20kJLSEp6HssTR7WkEdIoTQh+9yI7STGBVqf5p9/3DcwJMJgNxWTYQ10SOgj5kqaqv0uV4X/7RUOCC1DQG99CDQ85CbsVJc5R0yNtjTdSAAocCbYoCPUJLDZkU4n6xN6TFJhmF9iTF6ghHIWj3v3lQBGFIwwKPDr6bn1wk6o+N7S1/Flx7MpICqQLtYucA9Qw60+ESXVyuzy+FdQzN6Ag2BzRzgVAQTK+yxbjrDFqaQ7Fz2uBBtTUgoI9WtPiuHF9Ag7k75dPm/9rvSM3bh5iWUnM5OPid14966woWKNxHUin26EXTELxth6nX2Ps8GBcdlAvFDjjr7EcR+fGC3UUYRgGBe8c+195PzLOT8H+ejSX+xiGP18AAAD//wEAAP//FH+OY08CAAA="}'
+  creationTimestamp: 2018-12-26T09:14:30Z
+  generation: 1
+  labels:
+    app.kubernetes.io/deploy-manager: ksonnet
+    ksonnet.io/component: pytorch-operator
+  name: pytorchjobs.kubeflow.org
+  resourceVersion: "32806"
+  selfLink: /apis/apiextensions.k8s.io/v1beta1/customresourcedefinitions/pytorchjobs.kubeflow.org
+  uid: a7000c10-08ee-11e9-9c12-1866dabbab47
+spec:
+  conversion:
+    strategy: None
+  group: kubeflow.org
+  names:
+    kind: PyTorchJob
+    listKind: PyTorchJobList
+    plural: pytorchjobs
+    singular: pytorchjob
+  scope: Namespaced
+  validation:
+    openAPIV3Schema:
+      properties:
+        spec:
+          properties:
+            pytorchReplicaSpecs:
+              properties:
+                Master:
+                  properties:
+                    replicas:
+                      maximum: 1
+                      minimum: 1
+                      type: integer
+                Worker:
+                  properties:
+                    replicas:
+                      minimum: 1
+                      type: integer
+  version: v1beta1
+  versions:
+  - name: v1beta1
+    served: true
+    storage: true
+status:
+  acceptedNames:
+    kind: PyTorchJob
+    listKind: PyTorchJobList
+    plural: pytorchjobs
+    singular: pytorchjob
+  conditions:
+  - lastTransitionTime: 2018-12-26T09:14:30Z
+    message: no conflicts found
+    reason: NoConflicts
+    status: "True"
+    type: NamesAccepted
+  - lastTransitionTime: null
+    message: the initial names have been accepted
+    reason: InitialNamesAccepted
+    status: "True"
+    type: Established
+  storedVersions:
+  - v1beta1
