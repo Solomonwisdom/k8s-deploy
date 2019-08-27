@@ -48,7 +48,7 @@ spec:
             fieldRef:
               apiVersion: v1
               fieldPath: metadata.name
-        image: registry.njuics.cn/kubeflow/pytorch-operator:v0.3.0-18-g97b3b99
+        image: registry.cn-hangzhou.aliyuncs.com/njuicscn/pytorch-operator:v0.3.0-18-g97b3b99
         imagePullPolicy: IfNotPresent
         name: pytorch-operator
         resources: {}

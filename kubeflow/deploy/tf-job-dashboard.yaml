@@ -41,8 +41,8 @@ spec:
             fieldRef:
               apiVersion: v1
               fieldPath: metadata.namespace
-        image: registry.njuics.cn/kubeflow/tf_operator:latest
-        imagePullPolicy: Always
+        image: registry.cn-hangzhou.aliyuncs.com/njuicscn/tf_operator:v1alpha
+        imagePullPolicy: IfNotPresent
         name: tf-job-dashboard
         ports:
         - containerPort: 8080

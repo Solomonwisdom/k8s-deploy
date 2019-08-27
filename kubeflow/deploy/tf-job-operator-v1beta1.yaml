@@ -48,7 +48,7 @@ spec:
             fieldRef:
               apiVersion: v1
               fieldPath: metadata.name
-        image: registry.njuics.cn/kubeflow/tf_operator:latest
+        image: registry.cn-hangzhou.aliyuncs.com/njuicscn/tf_operator:v1alpha
         imagePullPolicy: Always
         name: tf-job-operator
         resources: {}
