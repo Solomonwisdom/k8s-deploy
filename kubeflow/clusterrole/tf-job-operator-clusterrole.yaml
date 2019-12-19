@@ -1,17 +1,11 @@
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
 metadata:
-  annotations:
-    ksonnet.io/managed: '{"pristine":"H4sIAAAAAAAA/4ySvW7rMAyF9/sYHC8cF9kKrx26d+hSZKBsOlEiiQJJuT9B3r2Qm7ZAnSKdbPIcfCQPdATM/pFEPSfoQBz2LRbbsfg3NM+pPdxq6/lmWjsyXEMDB58G6OAuFDWSBw4EDUQyHNAQuiMEdBS0/mHO0IGNqz27FWcSNJaKUE6JrHJ7jpkTJbtgPDWQMNJlRUoghe5pvuBeuORagVFSljHwc8uyrbOKo69y04CQcpGePtzjnp3W9kTi5tZ/2JyaH1DMnl4q2XPScyILVl/UOH62Bhp98jXB63g1FtzSb+Cz3AdUpes0h9bvFpA/3bm8idPotxGzQgOZh/pRkslXvQFKQ2afbFbrI1KjZBOHEuu6Ps6miarjesbzkO+cF8sMlAO/xou0zenfOwAAAP//AQAA///gjwyRywIAAA=="}'
-  creationTimestamp: 2018-12-26T06:52:03Z
   labels:
     app: tf-job-operator
     app.kubernetes.io/deploy-manager: ksonnet
     ksonnet.io/component: tf-job-operator
   name: tf-job-operator
-  resourceVersion: "13549"
-  selfLink: /apis/rbac.authorization.k8s.io/v1/clusterroles/tf-job-operator
-  uid: c02b68ef-08da-11e9-9c12-1866dabbab47
 rules:
 - apiGroups:
   - tensorflow.org

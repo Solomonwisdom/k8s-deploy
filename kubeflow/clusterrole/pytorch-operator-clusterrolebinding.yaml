@@ -1,17 +1,11 @@
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
 metadata:
-  annotations:
-    ksonnet.io/managed: '{"pristine":"H4sIAAAAAAAA/3yPMU/EMAyFd36G51J0G8oGDOyHxIIYnNTHmaZ25DiHoOp/R9WJrXSz9Pm9p28GLPxKVlkFAljE1GPzsxr/oLNKP97XnvXucojkeIAORpYBAjzlVp3sqJkeWQaWD+hgIscBHSHMkDFSruuFpUCA8u1q6XyrhQxdba2qKkK+9iedigqJb30uHQhO9A8yzXSk03WJn01b2VPZVIDdhdriJyWvEN7mv/AL2YUTPaSkTXwnfyW1YFrx2CKdsn7B8r7c/AIAAP//AQAA//85QYdTfgEAAA=="}'
-  creationTimestamp: 2018-12-26T06:52:15Z
   labels:
     app: pytorch-operator
     app.kubernetes.io/deploy-manager: ksonnet
     ksonnet.io/component: pytorch-operator
   name: pytorch-operator
-  resourceVersion: "13627"
-  selfLink: /apis/rbac.authorization.k8s.io/v1/clusterrolebindings/pytorch-operator
-  uid: c77cb94f-08da-11e9-9c12-1866dabbab47
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole

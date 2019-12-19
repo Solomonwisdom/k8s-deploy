@@ -6,14 +6,8 @@ data:
     }
 kind: ConfigMap
 metadata:
-  annotations:
-    ksonnet.io/managed: '{"pristine":"H4sIAAAAAAAA/3SPT0vEQAzF736K8s79g9e5Ct4EQfA0UNJuuo6dJsNMXFlKv7vMLp7EW8j7kfzeDkrhnXMJKnC4PKLFiYzgdswqljVGzuOssoTzuITI/ZW2CIfdS9M0jcc5p/mN84Xzc4j8Svbh4RqPQZMNW1y/Jh4qMxpL0bxE/R7Ljf9n3aerh5cDR4s1yAkOT7f/L5TQYmOjX8VIE8dSp7WoCFsfdJh1SyosBgdbuk+dOk2cyTTXk0Ib/026e0Xc85JorlCVr2Y4jocfAAAA//8BAAD//3a4qnErAQAA"}'
-  creationTimestamp: 2018-12-26T09:14:17Z
   labels:
     app.kubernetes.io/deploy-manager: ksonnet
     ksonnet.io/component: tf-job-operator
   name: tf-job-operator-config
   namespace: kubeflow
-  resourceVersion: "32728"
-  selfLink: /api/v1/namespaces/kubeflow/configmaps/tf-job-operator-config
-  uid: 9f3b6da0-08ee-11e9-9c12-1866dabbab47

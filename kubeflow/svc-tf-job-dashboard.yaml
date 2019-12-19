@@ -11,15 +11,11 @@ metadata:
       rewrite: /tfjobs/
       service: tf-job-dashboard.kubeflow
     ksonnet.io/managed: '{"pristine":"H4sIAAAAAAAA/3SOsW7rMAxF9/cVBmcrztsCrZ06FAhQoEvdgbZpV4lNCiKTtAj874XqtM7STdQh77lXwBheKGkQBg/n/1DCMXAHHp4pnUNLUMJEhh0agr8CMouhBWHN40CGU4Oq2EnaBKla4T4M4ME5V/Ma7ot1rzpva84WXxRPGGPgoWbGiXxh/UEadafgph8QE/XhwxfVwqqaE11SMLr/0qVsDnAHaVyH+t4Ipm5zPDXUj3KBuYQRGxq/ex9VmMmWxlMUJjbwcLuWSAlNUr7JvVbymwsL0YhtxvcWjdRmR5RkCv51eYHfbUswTAPZ/jbvtvNbCUojtdnmr3/a5hLsM2b0MJ7UKD3uYZ7/fQEAAP//AQAA//90FuCPvwEAAA=="}'
-  creationTimestamp: 2018-12-26T09:14:18Z
   labels:
     app.kubernetes.io/deploy-manager: ksonnet
     ksonnet.io/component: tf-job-operator
   name: tf-job-dashboard
   namespace: kubeflow
-  resourceVersion: "32733"
-  selfLink: /api/v1/namespaces/kubeflow/services/tf-job-dashboard
-  uid: 9f627582-08ee-11e9-9c12-1866dabbab47
 spec:
   ports:
   - port: 80
@@ -29,5 +25,3 @@ spec:
     name: tf-job-dashboard
   sessionAffinity: None
   type: ClusterIP
-status:
-  loadBalancer: {}

@@ -1,19 +1,11 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  annotations:
-    deployment.kubernetes.io/revision: "1"
-    ksonnet.io/managed: '{"pristine":"H4sIAAAAAAAA/5yST2sbQQzF7/0YOu+fmBxaL/RgmvTm1LRQKMEE7VjeTD0zGma025ow372oduLSOinkpkGr33t62gfAaL9SypYDdEA/hYLWuZ1mPQnOoIKdDRvo4Iqi472nIFCBJ8ENCkL3AA57clmrXeYQSBrLrWEfOejHHcS9cDL3NUdKKJygVBDQ07nWoZMjGm3vxp62jn/oRI5kVCRRdNZghm5WgZCPDoW0cd7Tc0LlD6ThIGgDpQzdrT69R935Ftq/55pTLnWNLrPjQTjLhpKar6f3M1hXQGH6jTqqL7/drT5d3d0sltdfVosP11DBhG6kj4m9GthacpvPtH2qVyj30D2t1JxCKaVU57ivQiptXYH1OCgu0WCzpH0Tvo/W5MaE9vEC/wTRTRfNZXNRz97Vw/xtf9nP5/DSWSd2o6clj0EOKXstj6ZaEtMaDls7nCCHd30YhLJWp5nSZA0tjNHpm/+oPZ5TOUuML/wO9VG8PK9eSnnzCwAA//8BAAD//0CizyMvAwAA"}'
-  creationTimestamp: 2018-12-26T09:14:30Z
-  generation: 1
   labels:
     app.kubernetes.io/deploy-manager: ksonnet
     ksonnet.io/component: pytorch-operator
   name: pytorch-operator
   namespace: kubeflow
-  resourceVersion: "17230313"
-  selfLink: /apis/extensions/v1beta1/namespaces/kubeflow/deployments/pytorch-operator
-  uid: a7026cfe-08ee-11e9-9c12-1866dabbab47
 spec:
   progressDeadlineSeconds: 2147483647
   replicas: 1
@@ -69,16 +61,3 @@ spec:
           defaultMode: 420
           name: pytorch-operator-config
         name: config-volume
-status:
-  availableReplicas: 1
-  conditions:
-  - lastTransitionTime: 2018-12-26T09:14:30Z
-    lastUpdateTime: 2018-12-26T09:14:30Z
-    message: Deployment has minimum availability.
-    reason: MinimumReplicasAvailable
-    status: "True"
-    type: Available
-  observedGeneration: 1
-  readyReplicas: 1
-  replicas: 1
-  updatedReplicas: 1
