@@ -41,7 +41,7 @@ metadata:
   namespace: kube-system
 data:
   config.yaml: |
-    issuer: http://aikit.nju.edu.cn/auth
+    issuer: http://dlkit.nju.edu.cn/auth
     storage:
       type: kubernetes
       config:
@@ -58,7 +58,7 @@ data:
       name: OpenLDAP
       id: ldap
       config:
-        host: openldap.openldap.svc.cluster.local:389
+        host: openldap.openldap:389
         insecureNoSSL: true
         bindDN: cn=admin,dc=njuics,dc=cn
         bindPW: dr0w55@P#nap
@@ -159,7 +159,7 @@ metadata:
   namespace: kube-system
 spec:
   rules:
-  - host: aikit.nju.edu.cn
+  - host: dlkit.nju.edu.cn
     http:
       paths:
       - backend:
