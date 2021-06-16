@@ -1,4 +1,4 @@
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: DaemonSet
 metadata:
   labels:
@@ -6,7 +6,6 @@ metadata:
   name: node-exporter
   namespace: kube-system
 spec:
-  revisionHistoryLimit: 10
   selector:
     matchLabels:
       app: node-exporter
@@ -18,21 +17,21 @@ spec:
       name: node-exporter
       annotations:
         prometheus.io/scrape: 'true'
-        prometheus.io/port: '9100'
+        prometheus.io/port: '9101'
         prometheus.io/path: 'metrics'
     spec:
       containers:
       - args:
-        - --web.listen-address=0.0.0.0:9100
+        - --web.listen-address=0.0.0.0:9101
         - --path.procfs=/host/proc
         - --path.sysfs=/host/sys
         - --collector.textfile.directory=/run/prometheus
-        image: prom/node-exporter:v0.18.0
+        image: prom/node-exporter:v1.0.1
         imagePullPolicy: IfNotPresent
         name: node-exporter
         ports:
-        - containerPort: 9100
-          hostPort: 9100
+        - containerPort: 9101
+          hostPort: 9101
           name: metrics
           protocol: TCP
         resources:
@@ -88,6 +87,5 @@ spec:
       - emptyDir:
           medium: Memory
         name: collector-textfiles
-  templateGeneration: 1
   updateStrategy:
     type: OnDelete
