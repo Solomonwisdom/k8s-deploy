@@ -53,6 +53,7 @@ spec:
         - mountPath: /run/prometheus
           name: collector-textfiles
           readOnly: true
+        # nvidia-driver<=450
       - image: registry.cn-hangzhou.aliyuncs.com/njuicscn/gpu-exporter:v0.4
         imagePullPolicy: IfNotPresent
         name: nvidia-dcgm-exporter
