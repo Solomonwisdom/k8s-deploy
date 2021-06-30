@@ -112,6 +112,7 @@ kubeadm init --config /etc/kubernetes/kubeadm-config.yaml
 mkdir -p $HOME/.kube
 cp -f /etc/kubernetes/admin.conf ${HOME}/.kube/config
 kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/62e44c867a2846fefb68bd5f178daf4da3095ccb/Documentation/kube-flannel.yml
+kubeadm token create --print-join-command
 JOIN_CMD=`kubeadm join 10.130.29.83:8443 --token qq1z4g.k63o2f4a7g9xdou3 \
     --discovery-token-ca-cert-hash sha256:0f03daf6b8b4c5b6fe9066cff8c88d780e6679f780f508e6934ef3fc069c4b27 \
     --control-plane `

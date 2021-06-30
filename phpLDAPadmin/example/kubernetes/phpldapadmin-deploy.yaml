@@ -22,7 +22,7 @@ spec:
             - containerPort: 80
           env:
             - name: PHPLDAPADMIN_LDAP_HOSTS
-              value: "openldap.openldap.svc.cluster.local"
+              value: "openldap.openldap"
             - name: PHPLDAPADMIN_SERVER_PATH
               value: "/phpldapadmin"
             - name: PHPLDAPADMIN_HTTPS

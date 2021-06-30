@@ -8,11 +8,11 @@ bootstrapTokens:
   - authentication
 kind: InitConfiguration
 localAPIEndpoint:
-  advertiseAddress: 127.0.0.1
+  advertiseAddress: 210.28.132.168
   bindPort: 6443
 nodeRegistration:
   criSocket: /var/run/dockershim.sock
-  name: n141
+  name: n168.njuics.cn
   taints:
   - effect: NoSchedule
     key: node-role.kubernetes.io/master
@@ -22,7 +22,7 @@ apiServer:
 apiVersion: kubeadm.k8s.io/v1beta2
 certificatesDir: /etc/kubernetes/pki
 clusterName: kubernetes
-controlPlaneEndpoint: "127.0.0.1:8443"
+controlPlaneEndpoint: "127.0.0.1:9443"
 controllerManager: {}
 dns:
   type: CoreDNS
@@ -31,11 +31,10 @@ etcd:
     dataDir: /var/lib/etcd
 imageRepository: registry.cn-hangzhou.aliyuncs.com/google_containers
 kind: ClusterConfiguration
-kubernetesVersion: v1.15.7
+kubernetesVersion: v1.18.6
 networking:
   podSubnet: 10.244.0.0/16
   dnsDomain: cluster.local
-  serviceSubnet: 10.96.0.0/12
 scheduler: {}
 ---
 apiVersion: kubeproxy.config.k8s.io/v1alpha1

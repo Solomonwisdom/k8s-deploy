@@ -1,0 +1,1 @@
+30 7 1 1,7 * /usr/bin/kubeadm alpha certs renew all
